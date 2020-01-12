@@ -6,15 +6,15 @@ function List(props) {
     let cards = [];
     for (let i = 0; i < props.cards.length; i++) {
         let currentCard = props.cards[i];
-        let card = <Card title={currentCard.title} content={currentCard.content} />
+        let card = <Card title={currentCard.title} content={currentCard.content} key={currentCard.id}/>
         cards.push(card);
     }
     return (
-        <section class="List">
-            <header class="List-header">
+        <section className="List">
+            <header className="List-header">
                 <h2>{props.header}</h2>
             </header>
-            <div class="List-cards">               
+            <div className="List-cards">               
                 {cards} 
             </div>
         </section>
